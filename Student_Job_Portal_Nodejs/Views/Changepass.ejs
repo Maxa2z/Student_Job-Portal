@@ -1,0 +1,90 @@
+<!-- <%-include('partials/nav.ejs')  %> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changepassword.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+  <% if(locals.id){  %>
+    <div class="start_nav">
+        <nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/settings/<%= id %>">BACK</a>
+            </div>
+          </nav>
+    </div>
+
+    <div>
+        <section class="p-5 w-100" style="background-color: #eee;border-radius: .5rem .5rem 0 0;">
+            <div class="row">
+              <div class="col-12">
+                <div class="card text-black" style="border-radius: 25px;">
+                  <div class="card-body p-md-5">
+                    <div class="row justify-content-center">
+                      <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+      
+                        <p class="text-center h1 fw-bold mb-5 mt-4">change Password</p>
+      
+                        <form method="post" action="/Change/<%= id %>">
+      
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <label class="form-label" for="Current_password" style="margin-left: 0px;">Current Password</label>
+                                <input type="password" name="Current_password" id="Current_password" class="form-control">
+                              
+                            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 71.2px;"></div><div class="form-notch-trailing"></div></div></div>
+                          </div>
+      
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              
+                              <label class="form-label" for="password" style="margin-left: 0px;">New Password</label>
+                              <input type="password" name="password" id="password" class="form-control">
+                            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 69.6px;"></div><div class="form-notch-trailing"></div></div></div>
+                          </div>
+      
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              
+                              <label class="form-label" for="conform_password" style="margin-left: 0px;">Confirm Password</label>
+                              <input type="password" name="conform_password" id="conform_password" class="form-control">
+                            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64px;"></div><div class="form-notch-trailing"></div></div></div>
+                          </div>
+                          <% if(locals.error){ %>
+                            <p><%= error  %></p>
+                          <% } %>
+                          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Change</button>
+                          </div>
+      
+                        </form>
+      
+                      </div>
+                      <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+      
+                        <img src="https://img.freepik.com/free-vector/access-control-system-illustration_335657-4640.jpg?w=740&t=st=1692971606~exp=1692972206~hmac=68390a582aa08ca682e4f71a875ae557ae5378e0b0a9a703f676464b1e68ae0a" class="img-fluid" alt="Sample image">
+                        
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+    <% } %>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_for job page...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    
+</head>
+<body>
+  <div>
+    <section class="p-5 w-100" style="background-color: #eee; border-radius: .5rem .5rem 0 0;">
+      <div class="row">
+        <div class="col-12">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <img src="https://t3.ftcdn.net/jpg/05/32/81/78/360_F_532817809_Cwl8Nbc2hr86IvoadrbDfGhCmSHK0T8A.jpg" alt="">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                  <p class="text-center h1 fw-bold mb-5 mt-4">LogIn</p>
+
+                  <form action="/LoginCheck" method="post">
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        
+                        <label class="form-label" for="email_log" style="margin-left: 0px;">Enter User Email</label>
+                        <input type="email" id="email_log" name="email_log" class="form-control" required>
+                      <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 69.6px;"></div><div class="form-notch-trailing"></div></div></div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        
+                        <label class="form-label" for="Password_log" style="margin-left: 0px;">Password</label>
+                        <input type="password" id="Password_log" name="Password_log" class="form-control" required>
+                      <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64px;"></div><div class="form-notch-trailing"></div></div></div>
+                    </div>
+                    
+
+                    <% if(locals.error){ %>
+                        <p><%= error %></p>
+                        <% } %>
+                    
+
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                        <input type="submit" class="btn btn-primary btn-lg" value="log in">
+                    </div>
+                    <a href="reg">Register</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+</body>
+</html>
+

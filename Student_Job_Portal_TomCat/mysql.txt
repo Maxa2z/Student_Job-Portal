@@ -1,0 +1,18 @@
+create database job;
+use job;
+
+
+create table register(email varchar(30),username varchar(30),userpassword varchar(29),primary key(email));
+create table fullreg(email varchar(50),username varchar(50),fullname varchar(50),location varchar(50),phonenum varchar(20),mobilenum varchar(20),primary key(email));
+create table jobreg(email varchar(50),username varchar(50),company varchar(50),experience varchar(50));
+
+
+
+DELETE FROM register WHERE email='sai@g.com';
+
+DELETE FROM fullreg WHERE email='nannapanenisaiganesh@gmail.com';
+
+
+select * from register;
+select * from fullreg;
+select * from jobreg;
